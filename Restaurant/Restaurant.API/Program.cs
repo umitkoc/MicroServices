@@ -1,23 +1,22 @@
-using MediatR;
 using System.Reflection;
-using Contact.Core.Repositories;
-using Contact.Infrastructure.Data;
-using Contact.Infrastructure.Repositories;
+using MediatR;
+using Restaurant.Core.Repositories;
+using Restaurant.Infrastructure.Data;
+using Restaurant.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.
     AddJsonFile("appsettings.json", optional: false, reloadOnChange: true).
     AddJsonFile("appsettings.Development.json", optional: true, reloadOnChange: true);
-// Add services to the container.
 
 builder.Services.AddControllers();
 //builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddScoped<IMediator, Mediator>();
-builder.Services.AddScoped<IProductRepository,ProductRepository>();
+builder.Services.AddScoped<IMediator,Mediator>();
 builder.Services.AddScoped<IDatabaseContext, DatabaseContext>();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 
 
 
@@ -31,9 +30,8 @@ if (app.Environment.IsDevelopment())
 
 //app.UseHttpsRedirection();
 
-
 app.UseAuthorization();
-app.UseStaticFiles();
+
 app.MapControllers();
 
 app.Run();
