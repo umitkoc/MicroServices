@@ -15,16 +15,21 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 app.UseOcelot().Wait();
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
 
 //app.UseHttpsRedirection();
-
+app.UseStaticFiles();
+app.UseRouting();
 app.UseAuthorization();
 
-app.MapControllers();
+//app.MapControllers();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.Run();

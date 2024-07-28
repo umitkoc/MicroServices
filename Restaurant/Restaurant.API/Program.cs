@@ -11,7 +11,7 @@ builder.Configuration.
 
 builder.Services.AddControllers();
 //builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IMediator,Mediator>();
@@ -22,16 +22,21 @@ builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
 
 //app.UseHttpsRedirection();
-
+app.UseStaticFiles();
+app.UseRouting();
 app.UseAuthorization();
 
-app.MapControllers();
+//app.MapControllers();
 
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 app.Run();

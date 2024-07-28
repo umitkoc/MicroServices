@@ -17,15 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contact.Application", "Serv
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Restaurant", "Restaurant", "{474790D5-9566-493B-B732-A2F06B559423}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.API", "Restaurant\Restaurant.API\Restaurant.API.csproj", "{A97FA813-7967-4CCB-BFD1-88BF921775E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant.API", "Restaurant\Restaurant.API\Restaurant.API.csproj", "{A97FA813-7967-4CCB-BFD1-88BF921775E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.Core", "Restaurant\Restaurant.Core\Restaurant.Core.csproj", "{6ED4EC45-14FA-42B7-A77F-87E3D230010B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant.Core", "Restaurant\Restaurant.Core\Restaurant.Core.csproj", "{6ED4EC45-14FA-42B7-A77F-87E3D230010B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.Application", "Restaurant\Restaurant.Application\Restaurant.Application.csproj", "{2DF911D1-6652-4797-86DE-847718330B19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant.Application", "Restaurant\Restaurant.Application\Restaurant.Application.csproj", "{2DF911D1-6652-4797-86DE-847718330B19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant.Infrastructure", "Restaurant\Restaurant.Infrastructure\Restaurant.Infrastructure.csproj", "{B748F109-2842-4104-9498-9ACA48020FA1}"
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E3A6784C-B386-48CA-A93D-196DCD634014}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant.Infrastructure", "Restaurant\Restaurant.Infrastructure\Restaurant.Infrastructure.csproj", "{B748F109-2842-4104-9498-9ACA48020FA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,10 +67,6 @@ Global
 		{B748F109-2842-4104-9498-9ACA48020FA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B748F109-2842-4104-9498-9ACA48020FA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B748F109-2842-4104-9498-9ACA48020FA1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E3A6784C-B386-48CA-A93D-196DCD634014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E3A6784C-B386-48CA-A93D-196DCD634014}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E3A6784C-B386-48CA-A93D-196DCD634014}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E3A6784C-B386-48CA-A93D-196DCD634014}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

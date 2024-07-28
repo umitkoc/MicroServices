@@ -16,11 +16,10 @@ namespace Contact.API.Controllers
         }
       
 
-        [HttpGet]
-        public async Task<ActionResult> GetProduct([FromQuery]GetProductQuery productId)
+        [HttpGet("{id}")]
+        public async Task<ActionResult> GetProduct(string id)
         {
-            var result =await _mediator.Send(productId);
-
+            var result = await _mediator.Send(new GetProductQuery(){Id = id});
             return await Task.FromResult<ActionResult>(Ok(result));
         }
     }

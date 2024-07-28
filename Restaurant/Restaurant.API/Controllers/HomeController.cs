@@ -15,10 +15,11 @@ namespace Restaurant.API.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet]
-        public async  Task<ActionResult> GetRestaurant([FromQuery]GetCustomerQuery query)
+
+        [HttpGet("{id}")]
+        public async  Task<ActionResult> GetRestaurant(string id)
         {
-            var result=await _mediator.Send(query);
+            var result=await _mediator.Send(new GetCustomerQuery(){Id = id});
             return await Task.FromResult<ActionResult>(Ok(result));
         }
     }
